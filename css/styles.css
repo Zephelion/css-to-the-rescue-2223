@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main > div{
+    width: 675px;
+    height: 500px;
+    background: linear-gradient(#8b7867,#726350);
+    border-radius: 40px 30px 130px 67px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 40px 67px 90px 67p; */
+}
+
+/* main > div div:nth-of-type(1){
+    width: 675px;
+    height: 100%;
+    border-radius: 70px;
+    background-color: #272b2a;
+} */
