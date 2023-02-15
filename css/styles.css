@@ -17,9 +17,9 @@ main{
 }
 
 main > div{
-    width: 675px;
+    width: 710px;
     height: 500px;
-    background: linear-gradient(#8b7867,#726350);
+    background: linear-gradient(#84735e,#4f4138);
     border-radius: 40px 30px 130px 67px;
     display: flex;
     justify-content: center;
@@ -36,6 +36,28 @@ main > div::before{
     z-index: -1;
     bottom: 3px;
 
+}
+
+main > div div:nth-of-type(1){
+    background-color: black;
+    border: 1px solid #4e4d4d;
+    width:46px;
+    height:105px;
+    border-radius: 10px;
+    top: -23px;
+    left: 0;
+    position: absolute;
+    transform: rotate(9deg);
+}
+
+main > div div:nth-of-type(2){
+   background: linear-gradient(#84735e, #5a5043);
+   height: 500px;
+   width: 500px;
+   bottom: 63px;
+   right: 49px;
+   bottom: 72px;
+   border-radius: 110px 70px 77px 10px;
 }
 
 /* main > div div:nth-of-type(1){
