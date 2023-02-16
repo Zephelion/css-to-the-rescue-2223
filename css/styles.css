@@ -2,6 +2,7 @@
     --shine-color: #c2bfb4;
     --screen-color: #272b2a;
     --screen-shadow: #5a5f5a;
+    --inner-screen-shadow: #333333;
 }
 
 
@@ -60,7 +61,7 @@ main > div > div:nth-of-type(1){
 
 main > div div:nth-of-type(2){
    background: linear-gradient(#84735e, #5a5043);
-   height: 500px;
+   height: 525px;
    width: 500px;
    bottom: 63px;
    right: 49px;
@@ -70,7 +71,7 @@ main > div div:nth-of-type(2){
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 24px 48px 60px 48px;
+   padding: 24px 35px 83px 35px;
 }
 
 main > div div:nth-of-type(2) > div{
@@ -87,6 +88,7 @@ main > div div:nth-of-type(2) div div{
     height: 100%;
     width:100%;
     border-radius: 18px;
+    box-shadow: inset 0px 0px 0px 5px var(--inner-screen-shadow);
 }
 
 /* main > div div:nth-of-type(1){
