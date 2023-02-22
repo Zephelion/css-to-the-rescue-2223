@@ -105,7 +105,7 @@ main > div > div:nth-of-type(1){
     box-shadow: inset 0px 2px var(--shine-color);
 }
 
-main > div div:nth-of-type(2){
+main > div > div:nth-of-type(2){
    background: linear-gradient(#84735e, #5a5043);
    height: 525px;
    width: 500px;
@@ -120,12 +120,13 @@ main > div div:nth-of-type(2){
    padding: 24px 35px 83px 35px;
 }
 
-main > div div:nth-of-type(2) > div{
+
+main > div > div:nth-of-type(2) > div:nth-of-type(1){
     background-color: var(--screen-color);
     height: 92%;
     width: 100%;
     border-radius: 51px;
-    box-shadow:inset 0px 13px var(--screen-shadow);
+    box-shadow:inset 0px 13px var(--screen-shadow), inset 0px -4px var(--screen-shadow-bottom);
     padding: 37px;
     padding-bottom: 50px;
 }
@@ -146,11 +147,15 @@ main > div > div:nth-of-type(2) div:nth-of-type(2) div{
     right: 50px;
     bottom: 10px;
 } 
+
+main > div > div:nth-of-type(2) div:nth-of-type(1) div{
     background-color: black;
     height: 100%;
     width:100%;
     border-radius: 18px;
     box-shadow: inset 0px 0px 0px 5px var(--inner-screen-shadow);
+    padding: 23px;
+}
 
 main > div > div:nth-of-type(2) div:nth-of-type(1) div p{
     font-family: 'Droid Sans', monospace;
