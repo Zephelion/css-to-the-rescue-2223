@@ -17,6 +17,44 @@ body{
     background-color: black;
 }
 
+label{
+    position:relative;
+    height: 2em;
+    width: 2em;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    transition: 0.4s;
+}
+
+label::after{
+    content: "POWER";
+    color: var(--shine-color);
+    font-size: 0.8em;
+    position: absolute;
+    left: 35px;
+    bottom: 16px;
+    transform: rotate(7deg);
+    font-family: monospace;
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+}
+
+input[type="checkbox"]:checked + label{
+    background: radial-gradient(white,yellow,orange,red);
+    box-shadow: 1px 1px 23px 2px red;
+    transition: 0.4s;
+}
+
 main{
     display: flex;
     justify-content: center;
