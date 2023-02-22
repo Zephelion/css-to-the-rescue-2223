@@ -151,11 +151,40 @@ main > div > div:nth-of-type(2) div:nth-of-type(2) div{
     width:100%;
     border-radius: 18px;
     box-shadow: inset 0px 0px 0px 5px var(--inner-screen-shadow);
+
+main > div > div:nth-of-type(2) div:nth-of-type(1) div p{
+    font-family: 'Droid Sans', monospace;
+    text-transform: uppercase;
+    overflow: hidden;
+    color:var(--green);
+    font-size: 0.5em;
+    text-align: center;
+    border-right: .15em solid var(--green);
+    white-space: nowrap;
+    animation: blink-caret .75s step-end infinite, typing 3.5s steps(40, end);
 }
 
-/* main > div div:nth-of-type(1){
-    width: 675px;
-    height: 100%;
-    border-radius: 70px;
-    background-color: #272b2a;
-} */
+
+main > div > div:nth-of-type(2) div:nth-of-type(1) div p::before{
+    content: "******************";
+    color: var(--green);
+    letter-spacing: 0.2em;
+}
+
+
+
+main > div > div:nth-of-type(2) div:nth-of-type(1) div p::after{
+    content: "******************";
+    color: var(--green);
+    letter-spacing: 0.2em;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--green); }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
