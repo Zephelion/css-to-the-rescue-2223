@@ -81,6 +81,9 @@ main > div div:nth-of-type(2) > div{
     border-radius: 51px;
     box-shadow:inset 0px 13px var(--screen-shadow);
     padding: 37px;
+    padding-bottom: 50px;
+}
+
 main > div > div:nth-of-type(2) div:nth-of-type(2){
     height: 4.1em;
     width: 22.5em;
