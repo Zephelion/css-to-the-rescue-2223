@@ -63,6 +63,25 @@ input[type="checkbox"]:checked + label{
     transition: 0.4s;
 }
 
+
+main:has(input[type="checkbox"]:checked) div > div:nth-of-type(2) div:nth-of-type(1) div p:nth-of-type(1) {
+    animation: blink-caret .75s step-end infinite, typing 3.5s steps(40, end);
+    animation-fill-mode: forwards;
+    /* width: auto; */
+}
+
+main:has(input[type="checkbox"]:checked) div > div:nth-of-type(2) div:nth-of-type(1) div p:nth-of-type(2) {
+    animation: blink-caret .75s step-end infinite, typing2 0.5s steps(40, end);
+    animation-fill-mode: forwards;
+    animation-delay: 3.8s;
+}
+
+main:has(input[type="checkbox"]:checked) div > div:nth-of-type(2) div:nth-of-type(1) div p:nth-of-type(3) {
+    animation: typing3 0.5s steps(40, end);
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}
+
 main{
     display: flex;
     justify-content: center;
@@ -157,32 +176,45 @@ main > div > div:nth-of-type(2) div:nth-of-type(1) div{
     padding: 23px;
 }
 
+
+/* Typing animation */
+/* Typing animation voor de eerst p */
 main > div > div:nth-of-type(2) div:nth-of-type(1) div p{
     font-family: 'Droid Sans', monospace;
     text-transform: uppercase;
     overflow: hidden;
     color:var(--green);
     font-size: 0.5em;
-    text-align: center;
-    border-right: .15em solid var(--green);
+    border-right: 0.6em solid var(--green);
     white-space: nowrap;
-    animation: blink-caret .75s step-end infinite, typing 3.5s steps(40, end);
+    width: 0;
+    animation: blink-caret .75s step-end infinite;
+}
+
+main > div > div:nth-of-type(2) div:nth-of-type(1) div p:nth-of-type(1){
+    text-align: center;
+    margin-bottom: 6em;
 }
 
 
-main > div > div:nth-of-type(2) div:nth-of-type(1) div p::before{
+main > div > div:nth-of-type(2) div:nth-of-type(1) div p:nth-of-type(1)::before{
     content: "******************";
     color: var(--green);
     letter-spacing: 0.2em;
 }
 
-
-
-main > div > div:nth-of-type(2) div:nth-of-type(1) div p::after{
+main > div > div:nth-of-type(2) div:nth-of-type(1) div p:nth-of-type(1)::after{
     content: "******************";
     color: var(--green);
     letter-spacing: 0.2em;
 }
+
+/* Typing animation voor de tweede p */
+/* main > div > div:nth-of-type(2) div:nth-of-type(1) div p:nth-of-type(2){
+    width: 0;
+} */
+
+
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
@@ -191,5 +223,15 @@ main > div > div:nth-of-type(2) div:nth-of-type(1) div p::after{
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 100% }
+    to { width: 100%; border: none; }
+  }
+  
+@keyframes typing2 {
+    from { width: 0 }
+    to { width: 14em }
+  }
+
+@keyframes typing3 {
+    from { width: 0 }
+    to { width: 6.5em }
   }
