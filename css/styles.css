@@ -25,6 +25,10 @@ body{
     background-color: black;
 }
 
+li{
+    list-style: none;
+}
+
 label{
     position:relative;
     height: 2em;
@@ -99,6 +103,19 @@ main:has(input[type="checkbox"]:checked) div > div:nth-of-type(2) div:nth-of-typ
     animation-delay: 7.4s;
 }
 
+main:has(input[type="checkbox"]:checked) div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(1){
+    animation: out-screen 0.5s steps(10, end); 
+    animation-fill-mode: forwards;
+    animation-delay: 11s;
+}
+
+main:has(input[type="checkbox"]:checked) div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(2){
+    animation: appear 0.5s steps(1, end);
+    animation-fill-mode: forwards;
+    animation-delay: 13.5s;
+}
+
+
 main{
     display: flex;
     justify-content: center;
@@ -108,7 +125,7 @@ main{
 
 main > div{
     width: 710px;
-    height: 500px;
+    height: 450px;
     background: linear-gradient(#84735e,#4f4138);
     border-radius: 40px 30px 130px 67px;
     display: flex;
@@ -148,12 +165,24 @@ main > div > div:nth-of-type(2){
    bottom: 63px;
    right: 49px;
    bottom: 72px;
-   border-radius: 110px 70px 77px 10px;
+   border-radius: 110px 70px 77px 74px;
    box-shadow: inset 0px 4px var(--shine-color);
    display: flex;
    justify-content: center;
    align-items: center;
    padding: 24px 35px 83px 35px;
+}
+
+main > div > div:nth-of-type(3){
+    width: 234px;
+    height: 125px;
+    background: linear-gradient(#7d6855,#726350,#211a14);
+    position: absolute;
+    bottom: -20px;
+    border-radius: 35px 35px 60px 60px;
+    border-top: 3px solid #403227;
+    z-index: 15;
+    left: 174px;
 }
 
 
@@ -165,6 +194,7 @@ main > div > div:nth-of-type(2) > div:nth-of-type(1){
     box-shadow:inset 0px 13px var(--screen-shadow), inset 0px -4px var(--screen-shadow-bottom);
     padding: 37px;
     padding-bottom: 50px;
+    z-index: 10;
 }
 
 main > div > div:nth-of-type(2) div:nth-of-type(2){
@@ -176,6 +206,28 @@ main > div > div:nth-of-type(2) div:nth-of-type(2){
     left: 84px;
     border-radius: 0px 0px 13px 13px;
     box-shadow: 0px 2px 5px -2px var(--inner-screen-shadow);
+    z-index: 10;
+}
+
+main > div > div:nth-of-type(2) div:nth-of-type(3){
+    height: 19em;
+    width: 11em;
+    background: var(--shine-color);
+    bottom: 2px;
+    position: absolute;
+    left: -26px;
+    border-radius: 13px 0px 73px 74px;
+}
+
+main > div > div:nth-of-type(2) div:nth-of-type(3)::before{
+    content: "";
+    height: 19em;
+    width: 33em;
+    background: #766654;
+    bottom: -2px;
+    position: absolute;
+    left: 0px;
+    border-radius: 13px 0px 73px 74px;
 }
 
 main > div > div:nth-of-type(2) div:nth-of-type(2) div{
@@ -189,14 +241,15 @@ main > div > div:nth-of-type(2) div:nth-of-type(1) div{
     height: 100%;
     width:100%;
     border-radius: 18px;
-    box-shadow: inset 0px 0px 0px 5px var(--inner-screen-shadow);
+    /* box-shadow: inset 0px 0px 0px 5px var(--inner-screen-shadow); */
     padding: 23px;
+    overflow: hidden;
 }
 
 
 /* Typing animation */
 /* Typing animation voor de eerst p */
-main > div > div:nth-of-type(2) div:nth-of-type(1) div section p{
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(1) p{
     font-family: 'Droid Sans', monospace;
     text-transform: uppercase;
     overflow: hidden;
@@ -208,55 +261,111 @@ main > div > div:nth-of-type(2) div:nth-of-type(1) div section p{
     animation: blink-caret .75s step-end infinite;
 }
 
-main > div > div:nth-of-type(2) div:nth-of-type(1) div section p:nth-of-type(1){
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(1) p:nth-of-type(1){
     text-align: center;
     margin-bottom: 6em;
 }
 
 
-main > div > div:nth-of-type(2) div:nth-of-type(1) div section p:nth-of-type(1)::before{
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(1) p:nth-of-type(1)::before{
     content: "******************";
     color: var(--green);
     letter-spacing: 0.2em;
 }
 
-main > div > div:nth-of-type(2) div:nth-of-type(1) div section p:nth-of-type(1)::after{
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(1) p:nth-of-type(1)::after{
     content: "******************";
     color: var(--green);
     letter-spacing: 0.2em;
 }
 
 /* Typing animation voor de tweede p */
-main > div > div:nth-of-type(2) div:nth-of-type(1) div section p:nth-of-type(2){
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(1) p:nth-of-type(2){
     border: none;
     width: 0;
 }
 
 /* Typing animation voor de derde p */
-main > div > div:nth-of-type(2) div:nth-of-type(1) div section p:nth-of-type(3){
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(1) p:nth-of-type(3){
     border: none;
     width: 0;
 }
 
 /* Typing animation voor de vierde p */
-main > div > div:nth-of-type(2) div:nth-of-type(1) div section p:nth-of-type(4){
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(1) p:nth-of-type(4){
     border: none;
     width: 0;
 }
 
 /* Typing animation voor de vijfde p */
-main > div > div:nth-of-type(2) div:nth-of-type(1) div section p:nth-of-type(5){
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(1) p:nth-of-type(5){
     border: none;
     width: 0;
 }
 
 /* Typing animation voor de zesde p */
-main > div > div:nth-of-type(2) div:nth-of-type(1) div section p:nth-of-type(6){
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(1) p:nth-of-type(6){
     border: none;
     width: 0;
 }
 
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(2){
+    transform: translateY(-94px);
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
 
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(2) section{
+    height: 10em;
+    width: fit-content;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+}
+
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(2) section img{
+    height: 100%;
+    width: auto;
+}
+
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(2) nav{
+    border-bottom: 1px solid var(--green);
+}
+
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(2) ul{
+    color: var(--green);
+    display: flex;
+    gap: 30px;
+    font-family: 'Droid Sans';
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(2) ul li{
+    font-size: 0.8em;
+}
+
+
+
+@keyframes out-screen{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-132px);
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
