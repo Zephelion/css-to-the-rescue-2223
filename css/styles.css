@@ -110,7 +110,7 @@ main:has(input[type="checkbox"]:checked) div > div:nth-of-type(2) div:nth-of-typ
 }
 
 main:has(input[type="checkbox"]:checked) div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(2){
-    animation: appear 0.5s steps(1, end);
+    animation: appear .8s linear;
     animation-fill-mode: forwards;
     animation-delay: 13.5s;
 }
@@ -310,8 +310,8 @@ main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(1) p:
 }
 
 main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(2){
-    transform: translateY(-94px);
-    opacity: 0;
+    transform: translateY(-466px);
+    opacity: 1;
     height: 100%;
     width: 100%;
     position: relative;
@@ -360,10 +360,19 @@ main > div > div:nth-of-type(2) div:nth-of-type(1) div section:nth-of-type(2) ul
 
 @keyframes appear{
     0%{
-        opacity: 0;
+        transform: translateY(-466px);
+    }
+    30%{
+        transform: translateY(0px);
+    }
+    60%{
+        transform: translateY(-100px);
+    }
+    85%{
+        transform: translateY(-50px);
     }
     100%{
-        opacity: 1;
+        transform: translateY(-94px);
     }
 }
 
