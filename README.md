@@ -281,3 +281,9 @@ Obviously you cant see the typing animation but you can check it by clicking on 
 
 ## Week 4
 If the time is there this week I want to focus on making the details of the control panel will be continued...
+|Pip boy progress|
+|:---:|
+|![Week 2 progress](images/finalpipboy.png)|
+
+### Sidenote
+I ended up making an additional screen with the bounce animation its not working accordingly but I guess it was worth a try..
